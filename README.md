@@ -1,7 +1,7 @@
-## CARD Data: https://drive.google.com/drive/folders/1Ob117J06-mPPBkGIAQsOdjqNmap41-lQ?usp=share_link
-
 # SD<sup>2</sup>: Spatially resolved transcriptomics deconvolution through integration of spatial and dropout information
 <br>
+
+## CARD Data: https://drive.google.com/drive/folders/1Ob117J06-mPPBkGIAQsOdjqNmap41-lQ?usp=share_link
 
 ![Pipeline](pipeline.png)
  
