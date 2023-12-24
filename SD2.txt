@@ -1,0 +1,338 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2709
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+R version 4.2.1 (2022-06-23) -- "Funny-Looking Kid"\
+Copyright (C) 2022 The R Foundation for Statistical Computing\
+Platform: x86_64-apple-darwin17.0 (64-bit)\
+\
+R is free software and comes with ABSOLUTELY NO WARRANTY.\
+You are welcome to redistribute it under certain conditions.\
+Type 'license()' or 'licence()' for distribution details.\
+\
+  Natural language support but running in an English locale\
+\
+R is a collaborative project with many contributors.\
+Type 'contributors()' for more information and\
+'citation()' on how to cite R or R packages in publications.\
+\
+Type 'demo()' for some demos, 'help()' for on-line help, or\
+'help.start()' for an HTML browser interface to help.\
+Type 'q()' to quit R.\
+\
+> getwd()\
+[1] "/Users/phillipsli/Desktop/2/Cell Type Deconvolution/SD2/SD2"\
+> source(SD2_utiles.R)\
+Error in source(SD2_utiles.R) : object 'SD2_utiles.R' not found\
+> list.files()\
+ [1] "gutils.py"           "layers.py"           "main.R"              "metrics.py"         \
+ [5] "models.py"           "PDAC_GSM4100721.rds" "pipeline.png"        "README.md"          \
+ [9] "SD2_utiles.R"        "train.py"           \
+> source(SD2_utiles.R)\
+Error in source(SD2_utiles.R) : object 'SD2_utiles.R' not found\
+> source("SD2_utiles.R")\
+\
+Attaching package: \'91rBeta2009\'92\
+\
+The following object is masked from \'91package:stats\'92:\
+\
+    rbeta\
+\
+\
+Attaching package: \'91igraph\'92\
+\
+The following objects are masked from \'91package:stats\'92:\
+\
+    decompose, spectrum\
+\
+The following object is masked from \'91package:base\'92:\
+\
+    union\
+\
+data.table 1.14.8 using 1 threads (see ?getDTthreads).  Latest news: r-datatable.com\
+**********\
+This installation of data.table has not detected OpenMP support. It should still work but in single-threaded mode.\
+This is a Mac. Please read https://mac.r-project.org/openmp/. Please engage with Apple and ask them for support. Check r-datatable.com for updates, and our Mac instructions here: https://github.com/Rdatatable/data.table/wiki/Installation. After several years of many reports of installation problems on Mac, it's time to gingerly point out that there have been no similar problems on Windows or Linux.\
+**********\
+Attaching SeuratObject\
+Error in library(SeuratData) : there is no package called \'91SeuratData\'92\
+> install.packages("SeuratData")\
+Warning in install.packages :\
+  package \'91SeuratData\'92 is not available for this version of R\
+\
+A version of this package for your version of R might be available elsewhere,\
+see the ideas at\
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages\
+> source("SD2_utiles.R")\
+Error in library(SeuratData) : there is no package called \'91SeuratData\'92\
+> devtools::install_github("satijalab/seurat-data", ref = 'develop')\
+Downloading GitHub repo satijalab/seurat-data@develop\
+\uc0\u9472 \u9472  R CMD build \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u10004   checking for file \'91/private/var/folders/nc/2h3sfzcs3jbdcxdh7h8mh4700000gn/T/RtmpUVhOkF/remotes913ffca1875/satijalab-seurat-data-00aa5be/DESCRIPTION\'92 ...\
+\uc0\u9472   preparing \'91SeuratData\'92:\
+\uc0\u10004   checking DESCRIPTION meta-information ...\
+\uc0\u9472   checking for LF line-endings in source and make files and shell scripts\
+\uc0\u9472   checking for empty or unneeded directories\
+   Omitted \'91LazyData\'92 from DESCRIPTION\
+\uc0\u9472   building \'91SeuratData_0.2.1.tar.gz\'92\
+   \
+* installing *source* package \'91SeuratData\'92 ...\
+** using staged installation\
+** R\
+** exec\
+** inst\
+** byte-compile and prepare package for lazy loading\
+** help\
+*** installing help indices\
+** building package indices\
+** testing if installed package can be loaded from temporary location\
+** testing if installed package can be loaded from final location\
+** testing if installed package keeps a record of temporary installation path\
+* DONE (SeuratData)\
+> source("SD2_utiles.R")\
+\
+Attaching package: \'91dplyr\'92\
+\
+The following objects are masked from \'91package:data.table\'92:\
+\
+    between, first, last\
+\
+The following objects are masked from \'91package:igraph\'92:\
+\
+    as_data_frame, groups, union\
+\
+The following objects are masked from \'91package:stats\'92:\
+\
+    filter, lag\
+\
+The following objects are masked from \'91package:base\'92:\
+\
+    intersect, setdiff, setequal, union\
+\
+Error in library(M3Drop) : there is no package called \'91M3Drop\'92\
+> install.packages("M3Drop")\
+Warning in install.packages :\
+  package \'91M3Drop\'92 is not available for this version of R\
+\
+A version of this package for your version of R might be available elsewhere,\
+see the ideas at\
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages\
+> require("devtools")\
+Loading required package: devtools\
+Loading required package: usethis\
+> install_github('tallulandrews/M3Drop')\
+Downloading GitHub repo tallulandrews/M3Drop@HEAD\
+These packages have more recent versions available.\
+It is recommended to update all of them.\
+Which would you like to update?\
+\
+ 1: All                                           \
+ 2: CRAN packages only                            \
+ 3: None                                          \
+ 4: yaml         (2.3.5      -> 2.3.7     ) [CRAN]\
+ 5: highr        (0.9        -> 0.10      ) [CRAN]\
+ 6: evaluate     (0.16       -> 0.23      ) [CRAN]\
+ 7: vctrs        (0.6.4      -> 0.6.5     ) [CRAN]\
+ 8: stringi      (1.7.12     -> 1.8.2     ) [CRAN]\
+ 9: rlang        (1.1.1      -> 1.1.2     ) [CRAN]\
+10: cachem       (1.0.6      -> 1.0.8     ) [CRAN]\
+11: tinytex      (0.42       -> 0.49      ) [CRAN]\
+12: knitr        (1.40       -> 1.45      ) [CRAN]\
+13: jsonlite     (1.8.7      -> 1.8.8     ) [CRAN]\
+14: htmltools    (0.5.6      -> 0.5.7     ) [CRAN]\
+15: bslib        (0.4.0      -> 0.6.1     ) [CRAN]\
+16: utf8         (1.2.3      -> 1.2.4     ) [CRAN]\
+17: scales       (1.2.1      -> 1.3.0     ) [CRAN]\
+18: rmarkdown    (2.16       -> 2.25      ) [CRAN]\
+19: htmlwidgets  (1.6.2      -> 1.6.3     ) [CRAN]\
+20: checkmate    (2.2.0      -> 2.3.1     ) [CRAN]\
+21: ps           (1.7.2      -> 1.7.5     ) [CRAN]\
+22: processx     (3.8.0      -> 3.8.2     ) [CRAN]\
+23: prettyunits  (1.1.1      -> 1.2.0     ) [CRAN]\
+24: matrixStats  (1.0.0      -> 1.1.0     ) [CRAN]\
+25: rprojroot    (2.0.3      -> 2.0.4     ) [CRAN]\
+26: RcppEigen    (0.3.3.9.3  -> 0.3.3.9.4 ) [CRAN]\
+27: RcppArmad... (0.12.6.4.0 -> 0.12.6.6.1) [CRAN]\
+28: mvtnorm      (1.2-2      -> 1.2-4     ) [CRAN]\
+29: gtools       (3.9.4      -> 3.9.5     ) [CRAN]\
+\
+Enter one or more numbers, or an empty line to skip updates: \
+Installing 12 packages: QuickJSR, loo, inline, StanHeaders, RcppParallel, rstantools, rstan, densEstBayes, bdsmatrix, reldist, statmod, bbmle\
+\
+  There is a binary version available but the source version is later:\
+         binary source needs_compilation\
+QuickJSR  1.0.7  1.0.8              TRUE\
+\
+Do you want to install from sources the package which needs compilation? (Yes/no/cancel) no\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/QuickJSR_1.0.7.tgz'\
+Content type 'application/x-gzip' length 4163066 bytes (4.0 MB)\
+==================================================\
+downloaded 4.0 MB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/loo_2.6.0.tgz'\
+Content type 'application/x-gzip' length 1924001 bytes (1.8 MB)\
+==================================================\
+downloaded 1.8 MB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/inline_0.3.19.tgz'\
+Content type 'application/x-gzip' length 127274 bytes (124 KB)\
+==================================================\
+downloaded 124 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/StanHeaders_2.26.28.tgz'\
+Content type 'application/x-gzip' length 2365887 bytes (2.3 MB)\
+==================================================\
+downloaded 2.3 MB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/RcppParallel_5.1.7.tgz'\
+Content type 'application/x-gzip' length 613073 bytes (598 KB)\
+==================================================\
+downloaded 598 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/rstantools_2.3.1.1.tgz'\
+Content type 'application/x-gzip' length 160448 bytes (156 KB)\
+==================================================\
+downloaded 156 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/rstan_2.32.3.tgz'\
+Content type 'application/x-gzip' length 8596558 bytes (8.2 MB)\
+==================================================\
+downloaded 8.2 MB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/densEstBayes_1.0-2.2.tgz'\
+Content type 'application/x-gzip' length 7981258 bytes (7.6 MB)\
+==================================================\
+downloaded 7.6 MB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/bdsmatrix_1.3-6.tgz'\
+Content type 'application/x-gzip' length 327026 bytes (319 KB)\
+==================================================\
+downloaded 319 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/reldist_1.7-2.tgz'\
+Content type 'application/x-gzip' length 180145 bytes (175 KB)\
+==================================================\
+downloaded 175 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/statmod_1.5.0.tgz'\
+Content type 'application/x-gzip' length 322654 bytes (315 KB)\
+==================================================\
+downloaded 315 KB\
+\
+trying URL 'https://cran.rstudio.com/bin/macosx/contrib/4.2/bbmle_1.0.25.tgz'\
+Content type 'application/x-gzip' length 894088 bytes (873 KB)\
+==================================================\
+downloaded 873 KB\
+\
+\
+The downloaded binary packages are in\
+	/var/folders/nc/2h3sfzcs3jbdcxdh7h8mh4700000gn/T//RtmpUVhOkF/downloaded_packages\
+\uc0\u9472 \u9472  R CMD build \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \u9472 \
+\uc0\u10004   checking for file \'91/private/var/folders/nc/2h3sfzcs3jbdcxdh7h8mh4700000gn/T/RtmpUVhOkF/remotes913fc5c71f5/tallulandrews-M3Drop-9128921/DESCRIPTION\'92 ...\
+\uc0\u9472   preparing \'91M3Drop\'92:\
+\uc0\u10004   checking DESCRIPTION meta-information ...\
+\uc0\u9472   checking for LF line-endings in source and make files and shell scripts\
+\uc0\u9472   checking for empty or unneeded directories\
+\uc0\u9472   building \'91M3Drop_3.10.6.tar.gz\'92\
+   \
+* installing *source* package \'91M3Drop\'92 ...\
+** using staged installation\
+** R\
+** inst\
+** byte-compile and prepare package for lazy loading\
+** help\
+*** installing help indices\
+** building package indices\
+** installing vignettes\
+** testing if installed package can be loaded from temporary location\
+** testing if installed package can be loaded from final location\
+** testing if installed package keeps a record of temporary installation path\
+* DONE (M3Drop)\
+> # devtools::install_github("satijalab/seurat-data", ref = 'develop')\
+> source("SD2_utiles.R")\
+Loading required package: numDeriv\
+Error in library(rhdf5) : there is no package called \'91rhdf5\'92\
+> install.packages("rhdf5")\
+Warning in install.packages :\
+  package \'91rhdf5\'92 is not available for this version of R\
+\
+A version of this package for your version of R might be available elsewhere,\
+see the ideas at\
+https://cran.r-project.org/doc/manuals/r-patched/R-admin.html#Installing-packages\
+> if (!require("BiocManager", quietly = TRUE))\
++     install.packages("BiocManager")\
+Bioconductor version 3.16 (BiocManager 1.30.22), R 4.2.1 (2022-06-23)\
+Bioconductor version '3.16' is out-of-date; the current release version '3.18' is available with R version\
+  '4.3'; see https://bioconductor.org/install\
+\
+Attaching package: \'91BiocManager\'92\
+\
+The following object is masked from \'91package:devtools\'92:\
+\
+    install\
+\
+> \
+> BiocManager::install("rhdf5")\
+'getOption("repos")' replaces Bioconductor standard repositories, see 'help("repositories", package =\
+"BiocManager")' for details.\
+Replacement repositories:\
+    CRAN: https://cran.rstudio.com/\
+Bioconductor version 3.16 (BiocManager 1.30.22), R 4.2.1 (2022-06-23)\
+Installing package(s) 'rhdf5'\
+also installing the dependencies \'91Rhdf5lib\'92, \'91rhdf5filters\'92\
+\
+trying URL 'https://bioconductor.org/packages/3.16/bioc/bin/macosx/contrib/4.2/Rhdf5lib_1.20.0.tgz'\
+Content type 'application/x-compressed-tar' length 9946741 bytes (9.5 MB)\
+==================================================\
+downloaded 9.5 MB\
+\
+trying URL 'https://bioconductor.org/packages/3.16/bioc/bin/macosx/contrib/4.2/rhdf5filters_1.10.1.tgz'\
+Content type 'application/x-compressed-tar' length 856350 bytes (836 KB)\
+==================================================\
+downloaded 836 KB\
+\
+trying URL 'https://bioconductor.org/packages/3.16/bioc/bin/macosx/contrib/4.2/rhdf5_2.42.1.tgz'\
+Content type 'application/x-compressed-tar' length 2967751 bytes (2.8 MB)\
+==================================================\
+downloaded 2.8 MB\
+\
+\
+The downloaded binary packages are in\
+	/var/folders/nc/2h3sfzcs3jbdcxdh7h8mh4700000gn/T//RtmpUVhOkF/downloaded_packages\
+Old packages: 'askpass', 'boot', 'bslib', 'cachem', 'car', 'checkmate', 'class', 'cluster', 'codetools',\
+  'cpp11', 'crosstalk', 'datawizard', 'dbplyr', 'deldir', 'DoE.base', 'dotCall64', 'dplyr', 'dqrng', 'evaluate',\
+  'expm', 'FNN', 'foreign', 'gert', 'GGally', 'ggrepel', 'gmp', 'gstat', 'gtools', 'haven', 'highr', 'hms',\
+  'htmltools', 'htmlwidgets', 'httpuv', 'httr', 'httr2', 'infer', 'insight', 'intervals', 'jsonlite',\
+  'KernSmooth', 'knitr', 'lattice', 'lava', 'leiden', 'lme4', 'lmom', 'lubridate', 'lwgeom', 'MASS', 'Matrix',\
+  'MatrixModels', 'matrixStats', 'mcmc', 'mgcv', 'minqa', 'mvtnorm', 'nlme', 'nnet', 'openssl', 'pkgload',\
+  'plotly', 'prettyunits', 'processx', 'prodlim', 'ps', 'psych', 'QuickJSR', 'R.utils', 'ragg', 'ranger',\
+  'rbibutils', 'RcppArmadillo', 'RcppEigen', 'RCurl', 'Rdpack', 'readxl', 'recipes', 'rematch', 'reticulate',\
+  'rlang', 'rmarkdown', 'rootSolve', 'rpart', 'rprojroot', 'scales', 'sctransform', 'Seurat', 'SeuratObject',\
+  'shiny', 'slider', 'sp', 'spacetime', 'spam', 'spatial', 'spatstat.explore', 'spatstat.random',\
+  'spatstat.sparse', 'spatstat.utils', 'stacks', 'stars', 'stringi', 'survival', 'svglite', 'sys', 'tensorflow',\
+  'testthat', 'textshaping', 'this.path', 'tinytex', 'units', 'utf8', 'uuid', 'V8', 'vctrs', 'vroom', 'vtable',\
+  'waldo', 'warp', 'webshot', 'wk', 'xml2', 'xts', 'yaml', 'zoo'\
+Update all/some/none? [a/s/n]: \
+n\
+> # devtools::install_github("satijalab/seurat-data", ref = 'develop')\
+> source("SD2_utiles.R")\
+Warning message:\
+package \'91rhdf5\'92 was built under R version 4.2.3 \
+> ST_data = readRDS('PDAC_GSM4100721.rds')\
+> sc_count = ST_data$sc_count\
+> st_count = ST_data$st_count\
+> cell_type = ST_data$cell_type\
+> st_location = ST_data$st_location\
+> SD2(as.matrix(sc_count),\
++     as.matrix(st_count),\
++     cell_type,\
++     ST_location = st_location[,c('x','y')],\
++     spot_num = 300, \
++     lower_cellnum = 10,\
++     upper_cellnum = 20)\
+[1] 19464\
+[1] "Removing  3169 undetected genes."}
